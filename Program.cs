@@ -19,7 +19,7 @@ namespace GroupPolicyEditor1
             string appName = "Group Policy Editor";
             string appVersion = "1.0.0";
             string appAuthor = "Velan Ramalinggam (velanr@gmail.com)";
-            string appdesc1 = "This tool helps define frequently used Group Policy items in enterprise IT compliance and security.";
+            string appdesc1 = "This tool helps define/set frequently used Group Policy items in enterprise IT compliance and security.";
             //string appdesc2 = "It is useful as it can help eliminate malware execution by attachment preview of malware infected Office documents/macro via unpatched Office bugs.";
             string appcoverage = "Covers Local group policy (Local GP). \nIt DOES NOT cover Active Directory based (AD) group policy.";
             //Console.ForegroundColor = ConsoleColor.Red;            
