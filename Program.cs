@@ -10,8 +10,22 @@ namespace GroupPolicyEditor1
     {
         static void Main(string[] args)
         {
+            // Set console windows , add 10 units/rows/columns to width and height - https://docs.microsoft.com/en-us/dotnet/api/system.console.setwindowsize?view=netframework-4.8
+            int origWidth, width;
+            int origHeight, height;
+
+            origWidth = Console.WindowWidth;
+            origHeight = Console.WindowHeight;
+
+            width = origWidth + 10;
+            height = origHeight + 10;
+            Console.SetWindowSize(width, height);
+
+            //Main program functions execution
             Menu_intro();
-            Menu_changes();
+            Menu_of_changes();
+            string x = Console.ReadLine();
+
         }
 
         static void Menu_intro ()
@@ -44,19 +58,21 @@ namespace GroupPolicyEditor1
 
         }
 
-        static void Menu_changes()
+        static void Menu_of_changes()
         {
-            Console.WriteLine("{0}", "Menu :");
-            Console.WriteLine("{0}", "1. HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile - Enable/Disable Firewall");
-            Console.WriteLine("{0}", "2. HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\StandardProfile - Enable/Disable Firewall");
-            Console.WriteLine("{0}", "3. HKLM:\Software\Policies\Microsoft\Windows\System -Name GroupPolicyRefreshTime - Group Policy refresh interval");
-            Console.WriteLine("{0}", "4. HKLM:\Software\Policies\Microsoft\Windows\System -Name GroupPolicyRefreshTimeOffset - Group Policy refresh time offset");
-            Console.WriteLine("{0}", "5. HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoAutoRun - No Autorun option enable/disable");
-            Console.WriteLine("{0}", "6. HKLM:\Software\Policies\Microsoft\W32time\Parameters\NtpServer - NTP time server name option");
-            Console.WriteLine("{0}", "7. HKLM:\Software\Policies\Microsoft\W32time\Parameters\Type - NTP server type");
-            Console.WriteLine("{0}", "8. HKLM:\Software\Policies\Microsoft\W32time\TimeProviders\NtpClient - Enable / disable NTP client");
-            Console.WriteLine("{0}", "9. Disable Cortana in Windows 10 Searches (Only applicable for WIndows 10 XXXXXXX)");
-            Console.WriteLine("{0}", "9. Disable Windows Store (Only applicable for WIndows 10 XXXXXXX)");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("{0}", "Group Policy Editor Menu :");
+            Console.WriteLine("{0}", "1. Enable/Disable Firewall (Domain profile) - HKLM:\\SOFTWARE\\Policies\\Microsoft\\WindowsFirewall\\DomainProfile");
+            Console.WriteLine("{0}", "2. Enable/Disable Firewall (Standard profile) - HKLM:\\SOFTWARE\\Policies\\Microsoft\\WindowsFirewall\\StandardProfile");
+            Console.WriteLine("{0}", "3. Group Policy refresh interval - HKLM:\\Software\\Policies\\Microsoft\\Windows\\System -Name GroupPolicyRefreshTime");
+            Console.WriteLine("{0}", "4. Group Policy refresh time offset - HKLM:\\Software\\Policies\\Microsoft\\Windows\\System -Name GroupPolicyRefreshTimeOffset");
+            Console.WriteLine("{0}", "5. No Autorun option enable/disable - HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\NoAutoRun");
+            Console.WriteLine("{0}", "6. NTP time server name option - HKLM:\\Software\\Policies\\Microsoft\\W32time\\Parameters\\NtpServer");
+            Console.WriteLine("{0}", "7. NTP server type - HKLM:\\Software\\Policies\\Microsoft\\W32time\\Parameters\\Type");
+            Console.WriteLine("{0}", "8. Enable / disable NTP client - HKLM:\\Software\\Policies\\Microsoft\\W32time\\TimeProviders\\NtpClient");
+            Console.WriteLine("{0}", "9. Disable Cortana in Windows 10 Searches (Only applicable for Windows 10 XXXXXXX)");
+            Console.WriteLine("{0}", "10. Disable Windows Store (Only applicable for Windows 10 XXXXXXX)");
+            Console.WriteLine("{0}", "11. Screen saver activation, with password, and timeout setting");
 
 
         }
