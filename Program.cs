@@ -70,8 +70,8 @@ namespace GroupPolicyEditor1
             Console.WriteLine("{0}", "6. NTP time server name option - HKLM:\\Software\\Policies\\Microsoft\\W32time\\Parameters\\NtpServer");
             Console.WriteLine("{0}", "7. NTP server type - HKLM:\\Software\\Policies\\Microsoft\\W32time\\Parameters\\Type");
             Console.WriteLine("{0}", "8. Enable / disable NTP client - HKLM:\\Software\\Policies\\Microsoft\\W32time\\TimeProviders\\NtpClient");
-            Console.WriteLine("{0}", "9. Disable Cortana in Windows 10 Searches (Only applicable for Windows 10 XXXXXXX)");
-            Console.WriteLine("{0}", "10. Disable Windows Store (Only applicable for Windows 10 XXXXXXX)");
+            Console.WriteLine("{0}", "9. Disable Cortana in Windows 10 Searches (Only applicable for Windows 10 Home, Professional & Enterprise)");
+            Console.WriteLine("{0}", "10. Disable Windows Store (Only applicable for Windows 10 Professional & Enterprise)");
             Console.WriteLine("{0}", "11. Screen saver activation, with password, and timeout setting");
 
 
