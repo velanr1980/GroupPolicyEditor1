@@ -8,6 +8,7 @@ namespace GroupPolicyEditor1
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
             // Set console windows , add 10 units/rows/columns to width and height - https://docs.microsoft.com/en-us/dotnet/api/system.console.setwindowsize?view=netframework-4.8
@@ -24,7 +25,40 @@ namespace GroupPolicyEditor1
             //Main program functions execution
             Menu_intro();
             Menu_of_changes();
-            string x = Console.ReadLine();
+
+            // Force console input as correct int type
+            int input = Convert.ToInt16(Console.ReadLine());
+
+            // Check input is within choice range
+            while (!BetweenRanges(1, 11, input))
+            {
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("{0}", "WRONG MENU OPTION. PLEASE KEY IN AGAIN.");
+                Console.WriteLine();
+                input = Convert.ToInt16(Console.ReadLine());
+            }
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Changes(input);
+
+            // Check validate input is correct int type
+            //int myinput;
+            //Changes(input);
+            //if (int.TryParse(input, out myinput))
+            //{
+            //    Changes(myinput);
+            //}
+            //else
+            //{
+            //    Console.WriteLine();
+            //    Console.ForegroundColor = ConsoleColor.Red;
+            //    Console.WriteLine("{0}", "WRONG MENU OPTION. PLEASE KEY IN AGAIN.");
+            //    Console.WriteLine();
+            //    Menu_of_changes();
+            //    input = Console.ReadLine();
+            //}
+
 
         }
 
@@ -73,7 +107,35 @@ namespace GroupPolicyEditor1
             Console.WriteLine("{0}", "9. Disable Cortana in Windows 10 Searches (Only applicable for Windows 10 Home, Professional & Enterprise)");
             Console.WriteLine("{0}", "10. Disable Windows Store (Only applicable for Windows 10 Professional & Enterprise)");
             Console.WriteLine("{0}", "11. Screen saver activation, with password, and timeout setting");
+            Console.WriteLine();
+            Console.WriteLine("{0}", "PLEASE KEY IN WHICH CHANGES TO IMPLEMENT :");
+            Console.WriteLine();
+            Console.WriteLine("{0}", "> ");
 
+        }
+
+        static void Changes(int input1)
+        {
+            if (input1 == 1)
+            {
+                int opt1_changes;
+                Console.WriteLine();
+                Console.WriteLine("{0}", "Enable or disable firewall? Press 1 to enable, 2 to disable");
+                opt1_changes = Convert.ToInt16(Console.ReadLine());
+                while (!BetweenRanges(1, 2, opt1_changes))
+                {
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("{0}", "WRONG MENU OPTION. PLEASE KEY IN AGAIN.");
+                    Console.WriteLine();
+                    opt1_changes = Convert.ToInt16(Console.ReadLine());
+                }
+                Console.ForegroundColor = ConsoleColor.Green;
+                if (opt1_changes == 1)
+                {
+
+                }
+            }
 
         }
 
@@ -120,6 +182,11 @@ namespace GroupPolicyEditor1
             }
 
             return str;
+        }
+
+        public static bool BetweenRanges(int a, int b, int number)
+        {
+            return (a <= number && number <= b);
         }
 
         //if (input1 == "ENABLE" && outlookver2 == "2010")
