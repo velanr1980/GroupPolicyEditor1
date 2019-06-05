@@ -45,6 +45,9 @@ namespace GroupPolicyEditor1
             Console.ForegroundColor = ConsoleColor.Green;
             Changes(input);
 
+            Console.WriteLine("{0}", "The policy tasks is completed.");
+            input = Convert.ToInt16(Console.ReadLine());
+
             // Check validate input is correct int type
             //int myinput;
             //Changes(input);
