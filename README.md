@@ -22,3 +22,7 @@ d) This CLI EXE program is designed to edit registry settings, so please run it 
   </i>
   <br><br>
   I did not include a USAGE manual , as it is easy & straight forward to use.
+  <br><br>
+  In terms of license & code usage/reuse, please refer to the LICENSE file.
+   <br><br>
+   Thank you.
