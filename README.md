@@ -12,7 +12,9 @@ The GPO objects covered are as follows :
 7. Disable Windows Store (Only applicable for Windows 10 Professional & Enterprise)<br>
 8. Screen saver activation, with password, and timeout setting<br>
 <br><br></h6>
-Please also find Powershell script equivalent of this program in the repository (file name : group_policy_win10_v2.ps1).
+Please also find Powershell script equivalent of this program in the repository (file name : group_policy_win10_v2.ps1).<br>
+This Powershell script covers same features/GPO objects as the CLI EXE program, and can also be used for group policy objects changes. <br>
+License and copyright applicable.
 <br><br>
 <i>Note : <br>
 a) This was tested in Windows 10 Professional Edition environment , and should work on Windows 10 Enterprise Edition (and WIndows 2016) as well.<br>
