@@ -48,24 +48,6 @@ namespace GroupPolicyEditor1
             Console.WriteLine("{0}", "The policy tasks is completed.");
             input = Convert.ToInt16(Console.ReadLine());
 
-            // Check validate input is correct int type
-            //int myinput;
-            //Changes(input);
-            //if (int.TryParse(input, out myinput))
-            //{
-            //    Changes(myinput);
-            //}
-            //else
-            //{
-            //    Console.WriteLine();
-            //    Console.ForegroundColor = ConsoleColor.Red;
-            //    Console.WriteLine("{0}", "WRONG MENU OPTION. PLEASE KEY IN AGAIN.");
-            //    Console.WriteLine();
-            //    Menu_of_changes();
-            //    input = Console.ReadLine();
-            //}
-
-
         }
 
         static void Menu_intro()
@@ -74,25 +56,14 @@ namespace GroupPolicyEditor1
             string appVersion = "1.0.0";
             string appAuthor = "Velan Ramalinggam (velanr@gmail.com)";
             string appdesc1 = "This tool helps define/set frequently used Group Policy items in enterprise IT compliance and security.";
-            //string appdesc2 = "It is useful as it can help eliminate malware execution by attachment preview of malware infected Office documents/macro via unpatched Office bugs.";
-            string appcoverage = "Covers Local group policy (Local GP). \nIt DOES NOT cover Active Directory based (AD) group policy.";
-            //Console.ForegroundColor = ConsoleColor.Red;            
+            string appcoverage = "Covers Local group policy (Local GP). \nIt DOES NOT cover Active Directory based (AD) group policy.";                       
             string appnote = "Note : Make sure to run this program in administrator mode (Run as administrator)";
-
             Console.WriteLine("{0}: Version {1} by {2}", appName, appVersion, appAuthor);
             Console.WriteLine();
-            Console.WriteLine("{0}", appdesc1);
-            //Console.WriteLine("{0}", appdesc2);
+            Console.WriteLine("{0}", appdesc1);            
             Console.WriteLine();
             Console.WriteLine("{0}", appcoverage);
-            Console.WriteLine();
-            //Console.WriteLine("Outlook path : {0}", outlookinstallpath1);
-            //Console.WriteLine("Outlook version : Microsoft Outlook {0}", outlookver1);
-            //Console.WriteLine("Outlook disable attachement preview : {0}", outlookdisableattachpreviewpath2);
-            //Console.WriteLine();
-            //Console.WriteLine("Outlook disable attachment preview registry path : ");
-            //Console.WriteLine("SubKey HKCU\\SOFTWARE\\Policies\\Microsoft\\office\\<version number>\\outlook\\preferences, Key disableattachmentpreviewing");
-            //Console.WriteLine();
+            Console.WriteLine();            
             Console.WriteLine("{0}", appnote);
             Console.WriteLine();
 
@@ -106,10 +77,7 @@ namespace GroupPolicyEditor1
             Console.WriteLine("{0}", "2. Enable/Disable Firewall (Standard profile) - HKLM:\\SOFTWARE\\Policies\\Microsoft\\WindowsFirewall\\StandardProfile");
             Console.WriteLine("{0}", "3. Group Policy refresh interval - HKLM:\\Software\\Policies\\Microsoft\\Windows\\System -Name GroupPolicyRefreshTime");
             Console.WriteLine("{0}", "4. Group Policy refresh time offset - HKLM:\\Software\\Policies\\Microsoft\\Windows\\System -Name GroupPolicyRefreshTimeOffset");
-            Console.WriteLine("{0}", "5. No Autorun option enable/disable - HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\NoAutoRun");
-            //Console.WriteLine("{0}", "6. NTP time server name option - HKLM:\\Software\\Policies\\Microsoft\\W32time\\Parameters\\NtpServer");
-            //Console.WriteLine("{0}", "7. NTP server type - HKLM:\\Software\\Policies\\Microsoft\\W32time\\Parameters\\Type");
-            //Console.WriteLine("{0}", "6. Enable / disable NTP client - HKLM:\\Software\\Policies\\Microsoft\\W32time\\TimeProviders\\NtpClient");
+            Console.WriteLine("{0}", "5. No Autorun option enable/disable - HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\NoAutoRun");            
             Console.WriteLine("{0}", "6. Disable Cortana in Windows 10 Searches (Only applicable for Windows 10 Home, Professional & Enterprise)");
             Console.WriteLine("{0}", "7. Disable Windows Store (Only applicable for Windows 10 Professional & Enterprise)");
             Console.WriteLine("{0}", "8. Screen saver activation, with password, and timeout setting");
@@ -404,8 +372,7 @@ namespace GroupPolicyEditor1
 
                 // Link reference https://getadmx.com/HKLM/Software/Policies/Microsoft/WindowsStore
                 Console.ForegroundColor = ConsoleColor.Green;
-                //Console.WriteLine();
-
+                
 
                 if (opt7_changes == 1)
                 {

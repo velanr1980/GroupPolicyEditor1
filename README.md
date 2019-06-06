@@ -20,4 +20,5 @@ b) This program will NOT work for Windows 8.1, Windows Vista, Windows 7, and Win
 c) It is designed for local GPO of Windows 10 (local profile), and NOT for domain level GPO objects.<br>
 d) This CLI EXE program is designed to edit registry settings, so please run it in adiministrator mode.<br>
   </i>
-
+  <br><br>
+  I did not include a USAGE manual , as it is easy & straight forward to use.
