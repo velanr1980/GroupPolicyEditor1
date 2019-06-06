@@ -2,7 +2,7 @@
 Group Policy editor for common group policy control items in Windows 10 / Windows 2019 environment.
 <br><br>
 The GPO objects covered are as follows :
-<br><br>
+<br><br><h6>
 1. Enable/Disable Firewall (Domain profile) - HKLM:\\SOFTWARE\\Policies\\Microsoft\\WindowsFirewall\\DomainProfile<br>
 2. Enable/Disable Firewall (Standard profile) - HKLM:\\SOFTWARE\\Policies\\Microsoft\\WindowsFirewall\\StandardProfile<br>
 3. Group Policy refresh interval - HKLM:\\Software\\Policies\\Microsoft\\Windows\\System -Name GroupPolicyRefreshTime<br>
@@ -11,7 +11,7 @@ The GPO objects covered are as follows :
 6. Disable Cortana in Windows 10 Searches (Only applicable for Windows 10 Home, Professional & Enterprise)<br>
 7. Disable Windows Store (Only applicable for Windows 10 Professional & Enterprise)<br>
 8. Screen saver activation, with password, and timeout setting<br>
-<br><br>
+<br><br></h6>
 Please also find Powershell script equivalent of this program in the repository (file name : group_policy_win10_v2.ps1).
 <br><br>
 <i>Note : <br>
