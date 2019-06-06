@@ -460,7 +460,7 @@ namespace GroupPolicyEditor1
                     using (key1)
                     {
 
-                        key1.SetValue("ScreenSaveActive", "00000001", RegistryValueKind.DWord);                        
+                        key1.SetValue("ScreenSaveActive", "1", RegistryValueKind.String);                        
                         key1.Close();
                     }
                 }
@@ -472,7 +472,7 @@ namespace GroupPolicyEditor1
                     using (key1)
                     {
 
-                        key1.SetValue("ScreenSaveActive", "00000000", RegistryValueKind.DWord);
+                        key1.SetValue("ScreenSaveActive", "0", RegistryValueKind.String);
                         key1.Close();
                     }
                 }
@@ -485,7 +485,7 @@ namespace GroupPolicyEditor1
                     using (key2)
                     {
 
-                        key2.SetValue("ScreenSaverIsSecure", "00000001", RegistryValueKind.DWord);
+                        key2.SetValue("ScreenSaverIsSecure", "1", RegistryValueKind.String);
                         key2.Close();
                     }
                 }
@@ -497,7 +497,7 @@ namespace GroupPolicyEditor1
                     using (key2)
                     {
 
-                        key2.SetValue("ScreenSaverIsSecure", "00000000", RegistryValueKind.DWord);
+                        key2.SetValue("ScreenSaverIsSecure", "0", RegistryValueKind.String);
                         key2.Close();
                     }
                 }
@@ -509,7 +509,7 @@ namespace GroupPolicyEditor1
 
                 using (key3)
                 {
-                    key3.SetValue("ScreenSaveTimeOut", opt8_changes_timeout, RegistryValueKind.DWord);
+                    key3.SetValue("ScreenSaveTimeOut", opt8_changes_timeout, RegistryValueKind.String);
                     key3.Close();
                 }    
                 
